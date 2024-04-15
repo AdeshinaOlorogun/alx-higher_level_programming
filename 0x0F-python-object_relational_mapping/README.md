@@ -1,8 +1,8 @@
 0x0F. Python - Object-relational mapping
 
 0. Get all states
-mandatory
-Write a script that lists all states from the database hbtn_0e_0_usa:
+   mandatory
+   Write a script that lists all states from the database hbtn_0e_0_usa:
 
 Your script should take 3 arguments: mysql username, mysql password and database name (no argument validation needed)
 You must use the module MySQLdb (import MySQLdb)
@@ -12,8 +12,8 @@ Results must be displayed as they are in the example below
 Your code should not be executed when imported
 
 1. Filter states
-mandatory
-Write a script that lists all states with a name starting with N (upper N) from the database hbtn_0e_0_usa:
+   mandatory
+   Write a script that lists all states with a name starting with N (upper N) from the database hbtn_0e_0_usa:
 
 Your script should take 3 arguments: mysql username, mysql password and database name (no argument validation needed)
 You must use the module MySQLdb (import MySQLdb)
@@ -23,8 +23,8 @@ Results must be displayed as they are in the example below
 Your code should not be executed when imported
 
 2. Filter states by user input
-mandatory
-Write a script that takes in an argument and displays all values in the states table of hbtn_0e_0_usa where name matches the argument.
+   mandatory
+   Write a script that takes in an argument and displays all values in the states table of hbtn_0e_0_usa where name matches the argument.
 
 Your script should take 4 arguments: mysql username, mysql password, database name and state name searched (no argument validation needed)
 You must use the module MySQLdb (import MySQLdb)
@@ -35,13 +35,13 @@ Results must be displayed as they are in the example below
 Your code should not be executed when imported
 
 3. SQL Injection...
-mandatory
-Wait, do you remember the previous task? Did you test "Arizona'; TRUNCATE TABLE states ; SELECT * FROM states WHERE name = '" as an input?
+   mandatory
+   Wait, do you remember the previous task? Did you test "Arizona'; TRUNCATE TABLE states ; SELECT \* FROM states WHERE name = '" as an input?
 
-guillaume@ubuntu:~/0x0F$ ./2-my_filter_states.py root root hbtn_0e_0_usa "Arizona'; TRUNCATE TABLE states ; SELECT * FROM states WHERE name = '"
+guillaume@ubuntu:~/0x0F$ ./2-my_filter_states.py root root hbtn_0e_0_usa "Arizona'; TRUNCATE TABLE states ; SELECT \* FROM states WHERE name = '"
 (2, 'Arizona')
 guillaume@ubuntu:~/0x0F$ ./0-select_states.py root root hbtn_0e_0_usa
-guillaume@ubuntu:~/0x0F$ 
+guillaume@ubuntu:~/0x0F$
 What? Empty?
 
 Yes, it’s an SQL injection to delete all records of a table…
@@ -56,8 +56,8 @@ Results must be displayed as they are in the example below
 Your code should not be executed when imported
 
 4. Cities by states
-mandatory
-Write a script that lists all cities from the database hbtn_0e_4_usa
+   mandatory
+   Write a script that lists all cities from the database hbtn_0e_4_usa
 
 Your script should take 3 arguments: mysql username, mysql password and database name
 You must use the module MySQLdb (import MySQLdb)
@@ -68,8 +68,8 @@ Results must be displayed as they are in the example below
 Your code should not be executed when imported
 
 5. All cities by state
-mandatory
-Write a script that takes in the name of a state as an argument and lists all cities of that state, using the database hbtn_0e_4_usa
+   mandatory
+   Write a script that takes in the name of a state as an argument and lists all cities of that state, using the database hbtn_0e_4_usa
 
 Your script should take 4 arguments: mysql username, mysql password, database name and state name (SQL injection free!)
 You must use the module MySQLdb (import MySQLdb)
@@ -80,8 +80,7 @@ The results must be displayed as they are in the example below
 Your code should not be executed when imported
 
 6. First state model
-mandatory
-
+   mandatory
 
 Write a python file that contains the class definition of a State and an instance Base = declarative_base():
 
@@ -95,8 +94,8 @@ Your script should connect to a MySQL server running on localhost at port 3306
 WARNING: all classes who inherit from Base must be imported before calling Base.metadata.create_all(engine)
 
 7. All states via SQLAlchemy
-mandatory
-Write a script that lists all State objects from the database hbtn_0e_6_usa
+   mandatory
+   Write a script that lists all State objects from the database hbtn_0e_6_usa
 
 Your script should take 3 arguments: mysql username, mysql password and database name
 You must use the module SQLAlchemy
@@ -107,8 +106,8 @@ The results must be displayed as they are in the example below
 Your code should not be executed when imported
 
 8. First state
-mandatory
-Write a script that prints the first State object from the database hbtn_0e_6_usa
+   mandatory
+   Write a script that prints the first State object from the database hbtn_0e_6_usa
 
 Your script should take 3 arguments: mysql username, mysql password and database name
 You must use the module SQLAlchemy
@@ -121,8 +120,8 @@ If the table states is empty, print Nothing followed by a new line
 Your code should not be executed when imported
 
 9. Contains `a`
-mandatory
-Write a script that lists all State objects that contain the letter a from the database hbtn_0e_6_usa
+   mandatory
+   Write a script that lists all State objects that contain the letter a from the database hbtn_0e_6_usa
 
 Your script should take 3 arguments: mysql username, mysql password and database name
 You must use the module SQLAlchemy
@@ -133,8 +132,8 @@ The results must be displayed as they are in the example below
 Your code should not be executed when imported
 
 10. Get a state
-mandatory
-Write a script that prints the State object with the name passed as argument from the database hbtn_0e_6_usa
+    mandatory
+    Write a script that prints the State object with the name passed as argument from the database hbtn_0e_6_usa
 
 Your script should take 4 arguments: mysql username, mysql password, database name and state name to search (SQL injection free)
 You must use the module SQLAlchemy
@@ -146,8 +145,8 @@ If no state has the name you searched for, display Not found
 Your code should not be executed when imported
 
 11. Add a new state
-mandatory
-Write a script that adds the State object “Louisiana” to the database hbtn_0e_6_usa
+    mandatory
+    Write a script that adds the State object “Louisiana” to the database hbtn_0e_6_usa
 
 Your script should take 3 arguments: mysql username, mysql password and database name
 You must use the module SQLAlchemy
@@ -157,8 +156,8 @@ Print the new states.id after creation
 Your code should not be executed when imported
 
 12. Update a state
-mandatory
-Write a script that changes the name of a State object from the database hbtn_0e_6_usa
+    mandatory
+    Write a script that changes the name of a State object from the database hbtn_0e_6_usa
 
 Your script should take 3 arguments: mysql username, mysql password and database name
 You must use the module SQLAlchemy
@@ -168,8 +167,8 @@ Change the name of the State where id = 2 to New Mexico
 Your code should not be executed when imported
 
 13. Delete states
-mandatory
-Write a script that deletes all State objects with a name containing the letter a from the database hbtn_0e_6_usa
+    mandatory
+    Write a script that deletes all State objects with a name containing the letter a from the database hbtn_0e_6_usa
 
 Your script should take 3 arguments: mysql username, mysql password and database name
 You must use the module SQLAlchemy
@@ -178,8 +177,8 @@ Your script should connect to a MySQL server running on localhost at port 3306
 Your code should not be executed when imported
 
 14. Cities in state
-mandatory
-Write a Python file similar to model_state.py named model_city.py that contains the class definition of a City.
+    mandatory
+    Write a Python file similar to model_state.py named model_city.py that contains the class definition of a City.
 
 City class:
 inherits from Base (imported from model_state)
@@ -197,5 +196,3 @@ Your script should connect to a MySQL server running on localhost at port 3306
 Results must be sorted in ascending order by cities.id
 Results must be display as they are in the example below (<state name>: (<city id>) <city name>)
 Your code should not be executed when imported.
-
-
